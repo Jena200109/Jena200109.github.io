@@ -12,3 +12,18 @@ jQuery(document).ready(function($) {
     autoplayTimeout: 5000
   });
 });
+
+const animateElements = document.querySelectorAll('.animate-element');
+
+function animateOnScroll() {
+  animateElements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight / 1.2) {
+      element.classList.add('animate');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);

@@ -338,7 +338,8 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
 
 /* Background Colors */
 .background-white, .primary-color-white .background-primary {
-  background-color: #fff !important;
+  background-image: url('img/pattern.png');
+  background-repeat: repeat;
 }
 .background-orange, .primary-color-orange .background-primary {
   background-color: #E4A600 !important;
@@ -353,7 +354,9 @@ ul.chevron .submenu > a::after, ul.chevron .sub-submenu > a::after, ul.chevron .
   background-color: #00B5A6 !important;
 }
 .background-dark, .primary-color-dark .background-primary {
-  background-color: #ffffff !important; 
+  background-image: url('/img/pattern.png');
+  background-repeat: repeat;
+  background-attachment: fixed; 
 }
 .background-grey {
   background-color: #f5f5f5 !important;
@@ -1506,4 +1509,25 @@ section, header {
   .background-image {
     background-position: center;
   }
+}
+
+/* styles.css */
+.animation-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.animate-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+/* styles.css */
+.animate-element.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
